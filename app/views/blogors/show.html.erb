@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @blogor.name %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @blogor.content %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @blogor.file %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_blogor_path(@blogor) %> |
+<%= link_to 'Back', blogors_path %>
+# mongodb.conf
+
+# Where to store the data.
+
+# Note: if you run mongodb as a non-root user (recommended) you may
+# need to create and set permissions for this directory manually,
+# e.g., if the parent directory isn't mutable by the mongodb user.
+dbpath=/var/lib/mongodb
+
+#where to log
+logpath=/var/log/mongodb/mongodb.log
+
+logappend=true
+
+#port = 27017
+
+# Disables write-ahead journaling
+# nojournal = true
+
+# Enables periodic logging of CPU utilization and I/O wait
+#cpu = true
